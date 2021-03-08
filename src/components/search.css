@@ -1,0 +1,17 @@
+
+.search {
+  margin: auto;
+  width: 50%;
+
+}
+
+input {
+	width:50%;
+	height:30px;
+}
+.btn {
+	border-radius:20px;
+	padding:10px;
+	
+}
+

@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/navbar.js';
+import Products from './components/products.js';
+import Search from './components/search.js';
+//import NavbarSearch from './components/NavbarSearch.js';
+import React from 'react'; //cuando se define un React.component tiene que estar
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+    <Navbar/>
+    <Search/>
+    <Products/>
+    </>
+  )
+};
 
+//const App = () => <div> Componente <Navbar/></div>
+//o bien
+
+/*
+  class App extends React.Component {
+  render() {
+      return <div>Componenete <Navbar/></div>
+    }
+  }
+
+*/
 export default App;
