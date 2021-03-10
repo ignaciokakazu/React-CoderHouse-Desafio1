@@ -1,7 +1,6 @@
 import Navbar from './components/navbar.js';
-import Products from './components/products.js';
-import Search from './components/search.js';
-//import NavbarSearch from './components/NavbarSearch.js';
+import ItemListContainer from './components/itemlistcontainer.js';
+import NavbarSearch from './components/navbarSearch.js';
 import React from 'react'; //cuando se define un React.component tiene que estar
 
 
@@ -9,8 +8,11 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Search/>
-    <Products/>
+    <NavbarSearch/>
+    <ItemListContainer greeting="hola nombre de usuario"/>
+      
+    
+    
     </>
   )
 };

@@ -1,35 +1,34 @@
 import React from 'react';
-import "./navbar.css";
+import CartWidget from "./cartwidget.js";
 
 class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
 
-  /*state = {
-  	logeado:false
-  }*/
+    this.state = {
+  	nombre:"Nombre del usuario",
+    }
+  };
 
   render() {
     return (
-      <div className="navbar">
-          <MenuDefault />
-      </div>
+      <nav>
+        <div className="nav-wrapper indigo black">
+          <a href="#" className="brand-logo center">Carrito de compras</a>
+          <ul id="nav-mobile" className="left hide-on-med-and-down">
+            <li><a href="sass.html">Categorías</a></li>
+            <li><a href="badges.html">Ofertas</a></li>
+            <li><a href="collapsible.html">Novedades</a></li>
+          </ul>
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
+            <li><CartWidget/></li>
+            <li>{this.state.nombre}</li>            
+          </ul>
+        </div>
+      </nav>
     )
   };
 }
-
-class MenuDefault extends React.Component {
-  render() {
-    return (
-    
-        <ul className="menuDefault">
-          <li><a href="#">Categorías</a></li>
-          <li><a href="#">Ofertas</a></li>
-          <li><a href="#">Novedades</a></li>
-        </ul>
-    
-      )
-  };
-}
-
 
 export default Navbar
 
